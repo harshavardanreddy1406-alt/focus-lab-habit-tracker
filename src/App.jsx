@@ -42,7 +42,7 @@ export function App() {
 const [selectedMonthIndex, setSelectedMonthIndex] = useState(today.getMonth());
 const [selectedYear, setSelectedYear] = useState(today.getFullYear());
 const [activeTabSpecial, setActiveTabSpecial] = useState(null);
-
+const [insertAfterId, setInsertAfterId] = useState(null);
   // Habits List State
   const [habits, setHabits] = useState(() => {
     const saved = localStorage.getItem('focuslab_habits');
