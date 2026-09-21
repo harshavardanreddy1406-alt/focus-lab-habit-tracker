@@ -37,9 +37,11 @@ export function App() {
   const [activeView, setActiveView] = useState('grid');
 
   // Month & Year State (Default November 2026 to match reference photo)
-  const [selectedMonthIndex, setSelectedMonthIndex] = useState(10); // November
-  const [selectedYear, setSelectedYear] = useState(2026);
-  const [activeTabSpecial, setActiveTabSpecial] = useState(null);
+  const today = new Date();
+
+const [selectedMonthIndex, setSelectedMonthIndex] = useState(today.getMonth());
+const [selectedYear, setSelectedYear] = useState(today.getFullYear());
+const [activeTabSpecial, setActiveTabSpecial] = useState(null);
 
   // Habits List State
   const [habits, setHabits] = useState(() => {
